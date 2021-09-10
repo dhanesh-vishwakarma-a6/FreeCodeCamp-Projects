@@ -1,0 +1,74 @@
+/* --- FONT --- */
+
+/* --- ROOT --- */
+:root {
+  --clr-light: #eee;
+  --shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+*,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--clr-light);
+}
+
+/* * ----- HEADER ----- */
+#header {
+  /* display */
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--clr-light);
+  /* dimension */
+  width: 100vw;
+  height: 4rem;
+  /* outer */
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  width: 60vw;
+}
+
+#header-img {
+  width: 12rem;
+  height: 4rem;
+}
+
+#nav-bar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  display: inline;
+}
+
+.nav-link {
+  text-transform: capitalize;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+/* * ----- FORM ----- */
+#form {
+  /* display */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  /* spacing */
+  margin: 1rem;
+}
