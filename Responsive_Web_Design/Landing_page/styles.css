@@ -144,3 +144,37 @@ li {
   transition: var(--transition);
   cursor: pointer;
 }
+
+/* * ----- CONTAINER ----- */
+.container {
+  max-width: 80vw;
+  margin: 5rem auto 0;
+}
+
+/* * ----- FEATURES ----- */
+.feature {
+  /* display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature .icon {
+  /* display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font */
+  font-size: 4rem;
+  /* dimension */
+  width: 20vw;
+  height: 125px;
+}
+
+.feature .desc {
+  width: 80vw;
+}
+
+.feature .desc h2 {
+  text-transform: capitalize;
+}
