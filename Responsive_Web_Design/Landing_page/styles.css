@@ -41,6 +41,29 @@ body {
   background-color: var(--clr-light);
 }
 
+/* * ----- HEADINGS ----- */
+h1,
+h2,
+h3,
+h4 {
+  /* fonts */
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  /* spacings */
+  margin-top: var(--spacing-3);
+}
+
+h1 {
+  font-size: 2.7rem;
+}
+h2 {
+  font-size: 2.2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
 /* * ----- HEADER ----- */
 #header {
   /* display */
@@ -104,12 +127,6 @@ li {
   flex-direction: column;
 }
 
-.form-section h1 {
-  text-align: center;
-  text-transform: capitalize;
-  margin-top: var(--spacing-3);
-}
-
 #form {
   /* display */
   display: flex;
@@ -159,6 +176,10 @@ li {
   align-items: center;
 }
 
+.feature h2 {
+  text-align: center;
+}
+
 .feature .icon {
   /* display */
   display: flex;
@@ -168,13 +189,13 @@ li {
   font-size: 4rem;
   /* dimension */
   width: 20vw;
-  height: 125px;
+  height: 8rem;
 }
 
 .feature .desc {
   width: 80vw;
 }
 
-.feature .desc h2 {
-  text-transform: capitalize;
+.feature .desc h3 {
+  text-align: left;
 }
