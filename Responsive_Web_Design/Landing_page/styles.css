@@ -1,12 +1,15 @@
 /* --- FONT --- */
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
 /* --- ROOT --- */
 :root {
+  /* colors */
   --clr-black: #222;
   --clr-white: #fff;
   --clr-light: #eee;
   --clr-yellow: #f1c40f;
-  /* spacing */
+  /* fonts */
+  --ff-1: "raleway", Courier New, Courier, monospace;
+  /* spacings */
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
   --spacing-3: 1rem;
@@ -20,9 +23,12 @@
 
 *,
 html {
-  box-sizing: border-box;
+  /* font */
+  font-family: var(--ff-1);
+  /* spacing */
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 *::before,
@@ -92,6 +98,7 @@ li {
 }
 
 #form {
+  /* display */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,15 +106,18 @@ li {
 }
 
 #email {
+  /* font */
   font-size: 1.2rem;
+  /* spacing */
   padding: var(--spacing-2);
   margin-top: var(--spacing-3);
+  /* outlook */
   border: none;
   border-radius: var(--radius-1);
 }
 
 #submit {
-  /* display */
+  /* font */
   color: var(--clr-light);
   font-size: 1.2rem;
   text-transform: uppercase;
