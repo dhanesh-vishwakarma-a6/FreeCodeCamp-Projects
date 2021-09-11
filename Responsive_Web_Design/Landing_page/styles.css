@@ -84,6 +84,18 @@ li {
   color: inherit;
 }
 
+/* BACKGROUND IMAGE */
+.image-carousel {
+  background-image: url("https://steinway.co.uk/wp-content/uploads/2020/03/SteinwayHall-7-1000x588.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  /* dimension */
+  width: 80vw;
+  height: 55vh;
+  /* spacing */
+  margin: auto;
+}
+
 /* * ----- FORM ----- */
 .form-section {
   display: flex;
@@ -93,6 +105,7 @@ li {
 }
 
 .form-section h1 {
+  text-align: center;
   text-transform: capitalize;
   margin-top: var(--spacing-3);
 }
