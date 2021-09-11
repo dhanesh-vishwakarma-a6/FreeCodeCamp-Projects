@@ -31,6 +31,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *::before,
@@ -241,7 +242,9 @@ li {
   display: flex;
   justify-content: center;
   /* spacings */
-  margin: 5rem 0;
+  /* margin: 5rem 0; */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 /* * ----- PRICING ----- */
