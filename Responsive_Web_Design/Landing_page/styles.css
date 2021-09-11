@@ -3,10 +3,12 @@
 /* --- ROOT --- */
 :root {
   /* colors */
-  --clr-black: #222;
+  --clr-black: #000;
   --clr-white: #fff;
-  --clr-light: #eee;
+  --clr-grey-1: #ddd;
+  --clr-grey-2: #eee;
   --clr-yellow: #f1c40f;
+  --clr-red: #c22026;
   /* fonts */
   --ff-1: "raleway", Courier New, Courier, monospace;
   /* spacings */
@@ -38,7 +40,7 @@ html {
 }
 
 body {
-  background-color: var(--clr-light);
+  background-color: var(--clr-grey-2);
 }
 
 /* * ----- HEADINGS ----- */
@@ -69,7 +71,7 @@ h3 {
   /* display */
   position: fixed;
   display: flex;
-  background-color: var(--clr-light);
+  background-color: var(--clr-grey-2);
   /* dimension */
   width: 100vw;
   height: 4rem;
@@ -140,6 +142,8 @@ li {
 #email {
   /* font */
   font-size: 1.2rem;
+  /* dimension */
+  width: 35vw;
   /* spacing */
   padding: var(--spacing-2);
   margin-top: var(--spacing-3);
@@ -150,10 +154,10 @@ li {
 
 #submit {
   /* font */
-  color: var(--clr-light);
+  color: var(--clr-white);
   font-size: 1.2rem;
   text-transform: uppercase;
-  background-color: var(--clr-black);
+  background-color: var(--clr-red);
   /* spacing */
   padding: var(--spacing-2) var(--spacing-3);
   margin-top: var(--spacing-3);
@@ -162,6 +166,10 @@ li {
   border-radius: var(--radius-1);
   transition: var(--transition);
   cursor: pointer;
+}
+
+#submit:hover {
+  background-color: var(--clr-black);
 }
 
 /* * ----- CONTAINER ----- */
@@ -211,5 +219,74 @@ li {
   display: flex;
   justify-content: center;
   /* spacings */
-  margin: 5rem 0 2rem;
+  margin: 5rem 0;
+}
+
+/* * ----- PRICING ----- */
+#pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product {
+  /* display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* dimensions */
+  width: calc(100% / 3);
+  /* spacings */
+  margin: var(--spacing-2);
+  /* outlook */
+  border-radius: var(--radius-1);
+  border: 1px solid var(--clr-black);
+}
+
+.product .level {
+  /* display */
+  background-color: var(--clr-grey-1);
+  /* font */
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  /* dimension */
+  width: 100%;
+  /* spacings */
+  padding: var(--spacing-3) 0;
+}
+
+.product ul {
+  /* display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.product ul li {
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: var(--spacing-1);
+}
+
+.btn {
+  /* display */
+  background-color: var(--clr-red);
+  /* fonts */
+  color: var(--clr-white);
+  text-transform: uppercase;
+  /* spacing */
+  padding: var(--spacing-2) var(--spacing-3);
+  margin: var(--spacing-3) 0;
+  /* outlook */
+  border: none;
+  border-radius: var(--radius-1);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--clr-black);
 }
