@@ -112,6 +112,7 @@ li {
   background-image: url("https://steinway.co.uk/wp-content/uploads/2020/03/SteinwayHall-7-1000x588.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  object-fit: cover;
   /* dimension */
   width: 80vw;
   height: 55vh;
@@ -165,7 +166,7 @@ li {
 /* * ----- CONTAINER ----- */
 .container {
   max-width: 80vw;
-  margin: 5rem auto 0;
+  margin: 5rem auto 1rem;
 }
 
 /* * ----- FEATURES ----- */
@@ -198,4 +199,13 @@ li {
 
 .feature .desc h3 {
   text-align: left;
+}
+
+/* * ----- VIDEO ----- */
+#howItWorks {
+  /* display */
+  display: flex;
+  justify-content: center;
+  /* spacings */
+  margin: 5rem 0 2rem;
 }
