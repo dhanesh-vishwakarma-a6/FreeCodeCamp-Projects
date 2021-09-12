@@ -1,0 +1,108 @@
+/* * --- FONTS --- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+/* * --- ROOT --- */
+:root {
+  /* colors */
+  --clr-black: #000;
+  --clr-white: #fff;
+  /* font colors */
+  --clr-grey-1: #ddd;
+  --clr-grey-2: #eee;
+  /* spacings */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 1rem;
+  --radius-1: 0.25rem;
+  --radius-2: 0.5rem;
+  /* fonts */
+  --ff-1: "Montserrat", Courier New, Courier, monospace;
+  /* shadows */
+  --shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
+  /* transitions */
+  --transition: all 300ms linear;
+}
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-1);
+}
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+/* * ----- HEADINGS ----- */
+h1,
+h2,
+h3,
+h4 {
+  /* fonts */
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  /* spacings */
+  margin-top: var(--spacing-3);
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+body {
+  background-color: var(--clr-grey-1);
+}
+
+/* * --- CONTAINER --- */
+.container {
+}
+
+/* * --- NAVBAR --- */
+#navbar {
+  /* display */
+  position: fixed;
+  /* dimensions */
+  width: 20rem;
+  /* outlooks */
+  border-right: 2px solid grey;
+}
+
+#navbar header {
+  text-align: center;
+}
+
+#navbar ul {
+  list-style: none;
+  padding-left: var(--spacing-3);
+}
+
+/* * ----- DOC SECTION ----- */
+#main-doc {
+  /* spacings */
+  padding: var(--spacing-3);
+  padding-top: 0;
+  /* outlooks */
+  margin-left: 20rem;
+}
+
+/* MAIN SECTION */
+.main-section,
+.main-section p,
+.main-section ul,
+.main-section ul li {
+  padding: var(--spacing-2);
+}
+
+.main-section ul li {
+  margin-left: 2rem;
+}
