@@ -129,7 +129,8 @@ li {
 }
 
 .nav-link:visited,
-.nav-link:focus {
+.nav-link:focus,
+.nav-link:active {
   color: inherit;
 }
 
