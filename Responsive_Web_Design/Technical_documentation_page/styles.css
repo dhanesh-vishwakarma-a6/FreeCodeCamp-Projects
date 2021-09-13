@@ -17,6 +17,7 @@
   --radius-2: 0.5rem;
   /* fonts */
   --ff-1: "Montserrat", Courier New, Courier, monospace;
+  --ff-2: "monospace", Arial, Helvetica, sans-serif;
   /* shadows */
   --shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
   /* transitions */
@@ -148,14 +149,21 @@ body {
   margin-left: 2rem;
 }
 
-.main-section pre {
+.main-section code {
   /* display */
+  position: relative;
+  display: block;
   background-color: var(--clr-grey-2);
-  font-family: "monospace";
-  /* dimension */
-  width: 100%;
+  /* typography */
+  font-family: var(--ff-2);
+  text-align: left;
+  white-space: pre-line;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
   /* spacings */
-  padding: 1rem;
+  padding: var(--spacing-3);
+  margin: var(--spacing-2);
   /* outlook */
   border-radius: var(--radius-1);
 }
