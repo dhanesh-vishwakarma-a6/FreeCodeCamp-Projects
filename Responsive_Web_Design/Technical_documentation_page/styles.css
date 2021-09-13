@@ -6,6 +6,7 @@
   /* colors */
   --clr-black: #000;
   --clr-white: #fff;
+  --clr-yellow: #f7dc03;
   /* font colors */
   --clr-grey-1: #ddd;
   --clr-grey-2: #eee;
@@ -75,7 +76,7 @@ body {
   overflow-x: hidden;
 }
 
-/* hides the scroll bar but keeps the functionality */
+/* * hides the scroll bar but keeps the functionality */
 #navbar::-webkit-scrollbar {
   display: none;
 }
@@ -85,11 +86,31 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
+/* * navbar header */
 #navbar header {
   /* fonts */
   text-align: center;
   /* spacings */
   padding: var(--spacing-3);
+  padding-top: var(--spacing-2);
+}
+
+#navbar .js-icon {
+  /* display */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: var(--clr-black);
+  background-color: var(--clr-yellow);
+  /* fonts */
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* dimension */
+  width: 64px;
+  height: 64px;
+  /* spacings */
+  margin: 0.5rem auto;
+  padding: var(--spacing-1);
 }
 
 /* * navbar list items */
