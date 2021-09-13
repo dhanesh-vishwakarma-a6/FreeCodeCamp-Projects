@@ -29,6 +29,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: var(--ff-1);
+  scroll-behavior: smooth;
 }
 
 *::before,
@@ -94,48 +95,27 @@ body {
   padding-top: var(--spacing-2);
 }
 
-#navbar .js-icon {
-  /* display */
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  color: var(--clr-black);
-  background-color: var(--clr-yellow);
-  /* fonts */
-  font-size: 1.5rem;
-  font-weight: 700;
-  /* dimension */
-  width: 64px;
-  height: 64px;
-  /* spacings */
-  margin: 0.5rem auto;
-  padding: var(--spacing-1);
-}
-
-/* * navbar list items */
-#navbar ul {
+/* * navbar links */
+#navbar li {
+  width: 100%;
+  border-top: 1px solid;
   list-style: none;
 }
 
-.navbar-list-item {
-  /* spacings */
-  padding: var(--spacing-3);
-  /* outlook */
-  border-top: 1px solid grey;
+#navbar a {
+  display: block;
+  padding: var(--spacing-3) 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.navbar-list-item:hover {
+#navbar a:hover {
   background-color: var(--clr-grey-2);
 }
 
-.navbar-list-item a {
-  text-decoration: none;
-}
-
-.navbar-list-item a,
-.navbar-list-item a:active,
-.navbar-list-item a:visited,
-.navbar-list-item a:focus {
+.nav-link:link,
+.nav-link:active,
+.nav-link:visited {
   color: inherit;
   text-decoration: none;
 }
