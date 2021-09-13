@@ -29,7 +29,7 @@
             <a href="#javaScript_&_Java" class="nav-link">JavaScript & Java</a>
           </li>
           <li>
-            <a href="#hello_world" class="nav-link">hello World</a>
+            <a href="#hello_world" class="nav-link">Hello World</a>
           </li>
           <li>
             <a href="#variables" class="nav-link">Variables</a>
@@ -186,12 +186,10 @@
               To get started with writing JavaScript, open the Scratchpad and
               write your first "Hello world" JavaScript code:
             </p>
-            <code>
-              <pre>
-function greetMe(yourName) { alert("Hello + yourName); }
-greetMe("World");</pre
-              >
-            </code>
+            <code
+              >function greetMe(yourName) { alert("Hello + yourName); }
+              greetMe("World");</code
+            >
             <p>
               Select the code in the pad and hit Ctrl+R to watch it unfold in
               your browser!
@@ -236,21 +234,21 @@ greetMe("World");</pre
           <section class="info">
             <p>You can declare a variable in three ways:</p>
             <p>With the keyword var. For example,</p>
-            <code><pre>var x = 42</pre></code>
+            <code>var x = 42</code>
             <p>
               This syntax can be used to declare both local and global
               variables.
             </p>
 
             <p>By simply assigning it a value. For example,</p>
-            <code><pre>x = 42</pre></code>
+            <code>x = 42</code>
             <p>
               This always declares a global variable. It generates a strict
               JavaScript warning. You shouldn't use this variant.
             </p>
 
             <p>With the keyword let. For example,</p>
-            <code><pre>let y = 13</pre></code>
+            <code>let y = 13</code>
             <p>
               This syntax can be used to declare a block scope local variable.
               See Variable scope below.
@@ -280,19 +278,15 @@ greetMe("World");</pre
               the function (or global context) within which x is declared, not
               the block, which in this case is an if statement.
             </p>
-            <code>
-              <pre>if (true) { var x = 5; } console.log(x); // 5</pre>
-            </code>
+            <code>if (true) { var x = 5; } console.log(x); // 5 </code>
             <p>
               This behavior changes, when using the let declaration introduced
               in ECMAScript 2015.
             </p>
-            <code>
-              <pre>
-if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
-              defined</pre
-              >
-            </code>
+            <code
+              >if (true) { let y = 5; } console.log(y); // ReferenceError: y is
+              not defined</code
+            >
           </section>
         </section>
         <!-- end single section -->
@@ -331,7 +325,7 @@ if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
               identifier: it must start with a letter, underscore or dollar sign
               and can contain alphabetic, numeric, or underscore characters.
             </p>
-            <code><pre>const PI = 3.14;</pre></code>
+            <code>const PI = 3.14;</code>
             <p>
               A constant cannot change value through assignment or be
               re-declared while the script is running. It has to be initialized
@@ -347,23 +341,18 @@ if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
               variable in the same scope. For example:
             </p>
             <code>
-              <pre>
-// THIS WILL CAUSE AN ERROR 
-function f() {}; const f = 5;
-
-// THIS WILL CAUSE AN ERROR ALSO 
-function f() { const g = 5; var g; //statements }</pre
-              >
-            </code>
+              // THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS
+              CAUSE AN ERROR ALSO function f() { const g = 5; var g;
+              //statements }</code
+            >
             <p>
               However, object attributes are not protected, so the following
               statement is executed without problems.
             </p>
-            <code>
-              <pre>
-const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</pre
-              >
-            </code>
+            <code
+              >const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
+              "otherValue";</code
+            >
           </section>
         </section>
         <!-- end single section -->
@@ -419,9 +408,7 @@ const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</pre
               is true. Use the optional else clause to execute a statement if
               the condition is false. An if statement looks as follows:
             </p>
-            <code>
-              <pre>if (condition) { statement_1; } else { statement_2; }</pre>
-            </code>
+            <code>if (condition) { statement_1; } else { statement_2; }</code>
             <p>
               condition can be any expression that evaluates to true or false.
               See Boolean for an explanation of what evaluates to true and
@@ -433,12 +420,11 @@ const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</pre
               You may also compound the statements using else if to have
               multiple conditions tested in sequence, as follows:
             </p>
-            <code>
-              <pre>
-if (condition_1) { statement_1; } else if (condition_2) { statement_2;
-            } else if (condition_n) { statement_n; } else { statement_last; }</pre
-              >
-            </code>
+            <code
+              >if (condition_1) { statement_1; } else if (condition_2) {
+              statement_2; } else if (condition_n) { statement_n; } else {
+              statement_last; }</code
+            >
             <p>
               In the case of multiple conditions only the first logical
               condition which evaluates to true will be executed. To execute
@@ -446,37 +432,25 @@ if (condition_1) { statement_1; } else if (condition_2) { statement_2;
               . In general, it's good practice to always use block statements,
               especially when nesting if statements:
             </p>
-            <code>
-              <pre>
-if (condition) { statement_1_runs_if_condition_is_true;
+            <code
+              >if (condition) { statement_1_runs_if_condition_is_true;
               statement_2_runs_if_condition_is_true; } else {
               statement_3_runs_if_condition_is_false;
-              statement_4_runs_if_condition_is_false; }</pre
-              >
-            </code>
+              statement_4_runs_if_condition_is_false; }</code
+            >
             <p>
               It is advisable to not use simple assignments in a conditional
               expression, because the assignment can be confused with equality
               when glancing over the code. For example, do not use the following
               code:
             </p>
-            <code>
-              <pre>
-if (x = y) { /* statements here */ }
-            </pre
-              >
-            </code>
+            <code> if (x = y) { /* statements here */ }</code>
             <p>
               If you need to use an assignment in a conditional expression, a
               common practice is to put additional parentheses around the
               assignment. For example:
             </p>
-            <code>
-              <pre>
-if ((x = y)) { /* statements here */ }
-            </pre
-              >
-            </code>
+            <code> if ((x = y)) { /* statements here */ }</code>
           </section>
         </section>
         <!-- end single section -->
@@ -491,12 +465,7 @@ if ((x = y)) { /* statements here */ }
               A while statement executes its statements as long as a specified
               condition evaluates to true. A while statement looks as follows:
             </p>
-            <code>
-              <pre>
-while (condition) statement
-            </pre
-              >
-            </code>
+            <code>while (condition) statement</code>
             <p>
               If the condition becomes false, statement within the loop stops
               executing and control passes to the statement following the loop.
@@ -516,9 +485,7 @@ while (condition) statement
             <p>
               The following while loop iterates as long as n is less than three:
             </p>
-            <code>
-              <pre>var n = 0; var x = 0; while (n < 3) { n++; x += n; }</pre>
-            </code>
+            <code>var n = 0; var x = 0; while (n < 3) { n++; x += n; }</code>
             <p>
               With each iteration, the loop increments n and adds that value to
               x. Therefore, x and n take on the following values:
@@ -561,24 +528,14 @@ while (condition) statement
               For example, the following code defines a simple function named
               square:
             </p>
-            <code>
-              <pre>
-function square(number) { return number * number; }
-            </pre
-              >
-            </code>
+            <code>function square(number) { return number * number; }</code>
             <p>
               The function square takes one argument, called number. The
               function consists of one statement that says to return the
               argument of the function (that is, number) multiplied by itself.
               The return statement specifies the value returned by the function.
             </p>
-            <code>
-              <pre>
-return number * number;
-            </pre
-              >
-            </code>
+            <code>return number * number;</code>
             <p>
               Primitive parameters (such as a number) are passed to functions by
               value; the value is passed to the function, but if the function
