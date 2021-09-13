@@ -73,17 +73,6 @@ body {
   height: 100%;
   /* outlooks */
   border-right: 3px groove grey;
-  overflow-x: hidden;
-}
-
-/* * hides the scroll bar but keeps the functionality */
-#navbar::-webkit-scrollbar {
-  display: none;
-}
-
-#navbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 }
 
 /* * navbar header */
@@ -92,7 +81,23 @@ body {
   text-align: center;
   /* spacings */
   padding: var(--spacing-3);
-  padding-top: var(--spacing-2);
+}
+
+/*  navbar scroll */
+#navbar ul {
+  display: block;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/*  hides the scroll bar but keeps the functionality */
+#navbar ul::-webkit-scrollbar {
+  display: none;
+}
+
+#navbar ul {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 /* * navbar links */
@@ -153,4 +158,32 @@ body {
   padding: 1rem;
   /* outlook */
   border-radius: var(--radius-1);
+}
+
+/* 
+*============
+* MEDIA QUERY
+*============
+*/
+
+@media (max-width: 815px) {
+  /* * ----- NAVBAR ----- */
+  #navbar {
+    /* position */
+    position: relative;
+    /* dimension */
+    width: 100vw;
+    height: 20rem;
+    /* outerlook */
+  }
+
+  /* * ----- MAIN-DOC ----- */
+  #main-doc {
+    /* dimension */
+    width: 100vw;
+    height: 100%;
+    /* spacings */
+    margin: 0;
+    margin-top: 5rem;
+  }
 }
