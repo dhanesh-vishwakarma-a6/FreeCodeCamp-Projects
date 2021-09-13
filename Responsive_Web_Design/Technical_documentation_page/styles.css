@@ -7,7 +7,6 @@
   --clr-black: #000;
   --clr-white: #fff;
   --clr-yellow: #f7dc03;
-  /* font colors */
   --clr-grey-1: #ddd;
   --clr-grey-2: #eee;
   /* spacings */
@@ -162,4 +161,16 @@ body {
 
 .main-section ul li {
   margin-left: 2rem;
+}
+
+.main-section pre {
+  /* display */
+  background-color: var(--clr-grey-2);
+  font-family: "monospace";
+  /* dimension */
+  width: 100%;
+  /* spacings */
+  padding: 1rem;
+  /* outlook */
+  border-radius: var(--radius-1);
 }
