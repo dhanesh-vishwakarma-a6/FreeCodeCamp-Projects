@@ -30,15 +30,19 @@
 /* * ----- GLOBAL STYLES -----  */
 *,
 html {
+  /* box model */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* typography */
   font-family: var(--ff-1);
+  /* misc */
   scroll-behavior: smooth;
 }
 
 *::before,
 *::after {
+  /* box model */
   margin: 0;
   padding: 0;
 }
@@ -84,14 +88,14 @@ li {
 #navbar {
   /* positioning */
   position: fixed;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   /* box model */
+  width: 100%;
   padding: 1.5rem;
   /* visuals */
   background-color: var(--clr-red);
-  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .nav-link {
@@ -108,24 +112,24 @@ li {
 
 /* * ---- WELCOME SECTION ----- */
 #welcome-section {
-  /* positioning */
+  /* box model */
+  width: 100vw;
+  height: 100vh;
+  /* visuals */
+  color: var(--clr-white);
+  background-color: var(--clr-black);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* visuals */
-  width: 100vw;
-  height: 100vh;
-  color: var(--clr-white);
-  background-color: var(--clr-black);
 }
 
 .highlight {
-  /* visuals */
-  color: var(--clr-red);
   /* typography */
   font-weight: 500;
   letter-spacing: 2px;
+  /* visuals */
+  color: var(--clr-red);
 }
 
 /* * ----- PROJECTS ----- */
