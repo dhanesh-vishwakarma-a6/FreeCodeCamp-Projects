@@ -41,8 +41,7 @@
   cursor: pointer;
 }
 
-/* * -----  */
-
+/* * ----- GLOBAL STYLES -----  */
 *,
 html {
   margin: 0;
@@ -82,7 +81,7 @@ li {
   display: inline;
 }
 
-/* ----- GLOBAL CLASSES ----- */
+/* * ----- GLOBAL CLASSES ----- */
 .title {
   font-weight: 600;
 }
@@ -107,7 +106,7 @@ li {
   padding: 1.5rem;
   /* visuals */
   background-color: var(--clr-red);
-  width: 100vw;
+  width: 100%;
 }
 
 .nav-link {
