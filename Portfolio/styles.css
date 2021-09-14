@@ -1,0 +1,141 @@
+/* * --- FONTS --- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+/* * --- ROOT --- */
+:root {
+  /* colors */
+  --clr-black: #000;
+  --clr-white: #fff;
+  --clr-white-2: #f0f0f0;
+  --clr-grey-1: #ddd;
+  --clr-grey-2: #eee;
+  --clr-yellow: #f7dc03;
+  --clr-red: #be3144;
+  --clr-blue: #46567d;
+  /* spacings */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 1rem;
+  --radius-1: 0.25rem;
+  --radius-2: 0.5rem;
+  /* fonts */
+  --ff-1: "Montserrat", Courier New, Courier;
+  --ff-2: "monospace", Arial, Helvetica, sans-serif;
+  /* shadows */
+  --shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
+  /* transitions */
+  --transition: all 300ms linear;
+}
+
+/* ----- EXAMPLE ----- */
+.props {
+  /* positioning */
+  position: relative;
+  /* box model */
+  padding: 4px 6px;
+  /* typography */
+  font-size: 16px;
+  /* visuals */
+  background: white;
+  /* misc */
+  cursor: pointer;
+}
+
+/* * -----  */
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-1);
+  scroll-behavior: smooth;
+}
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+/* * ----- HEADINGS ----- */
+h1,
+h2,
+h3,
+h4 {
+  /* typography */
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+li {
+  display: inline;
+}
+
+/* * --- NAVBAR --- */
+#navbar {
+  /* positioning */
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* box model */
+  padding: 1.5rem;
+  /* visuals */
+  background-color: var(--clr-red);
+  width: 100vw;
+}
+
+.nav-link {
+  /* box model */
+  margin: 0 1rem;
+  /* typography */
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-decoration: none;
+  /* visuals */
+  color: var(--clr-white);
+}
+
+/* * ---- WELCOME SECTION ----- */
+#welcome-section {
+  /* positioning */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* visuals */
+  width: 100vw;
+  height: 100vh;
+  color: var(--clr-white);
+  background-color: var(--clr-black);
+}
+
+#welcome-section .title {
+  font-weight: 600;
+}
+
+#welcome-section .sub-title {
+  /* typography */
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  /* visuals */
+  opacity: 0.8;
+}
+
+.highlight {
+  color: var(--clr-red);
+  letter-spacing: 2px;
+}
