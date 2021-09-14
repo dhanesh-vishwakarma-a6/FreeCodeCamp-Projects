@@ -82,6 +82,20 @@ li {
   display: inline;
 }
 
+/* ----- GLOBAL CLASSES ----- */
+.title {
+  font-weight: 600;
+}
+
+.sub-title {
+  /* typography */
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  /* visuals */
+  opacity: 0.8;
+}
+
 /* * --- NAVBAR --- */
 #navbar {
   /* positioning */
@@ -122,20 +136,33 @@ li {
   background-color: var(--clr-black);
 }
 
-#welcome-section .title {
-  font-weight: 600;
-}
-
-#welcome-section .sub-title {
-  /* typography */
-  font-weight: 400;
-  text-align: center;
-  letter-spacing: 1px;
-  /* visuals */
-  opacity: 0.8;
-}
-
 .highlight {
+  /* visuals */
   color: var(--clr-red);
+  /* typography */
   letter-spacing: 2px;
+}
+
+/* * ----- PROJECTS ----- */
+#projects {
+  /* box model */
+  padding-top: 4rem;
+  margin: auto;
+  /* visuals */
+  color: var(--clr-white);
+  background-color: var(--clr-blue);
+}
+
+#projects .title {
+  /* typography */
+  text-align: center;
+  text-decoration: underline;
+}
+
+.projects-grid {
+  /* positioning */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
