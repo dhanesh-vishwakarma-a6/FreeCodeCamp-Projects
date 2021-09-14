@@ -88,26 +88,38 @@ li {
 #navbar {
   /* positioning */
   position: fixed;
+  top: 0;
+  left: 0;
   /* box model */
   width: 100%;
-  padding: 1.5rem;
   /* visuals */
-  background-color: var(--clr-red);
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  background-color: var(--clr-red);
+  /* misc */
+  box-shadow: 0 2px 0 rgb(0 0 0 / 40%);
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
 }
 
 .nav-link {
   /* box model */
-  margin: 0 1rem;
+  padding: 1.5rem;
   /* typography */
   font-size: 1.2rem;
   font-weight: 500;
   text-transform: capitalize;
   text-decoration: none;
   /* visuals */
+  display: block;
   color: var(--clr-white);
+}
+
+.nav-link:hover {
+  background-color: var(--clr-blue);
 }
 
 /* * ---- WELCOME SECTION ----- */
