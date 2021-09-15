@@ -1,16 +1,11 @@
 /* * --- FONTS --- */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
 
 /* * --- ROOT --- */
 :root {
-  /* colors */
-  --clr-black: #000;
-  --clr-white: #fff;
-  --clr-white-2: #f0f0f0;
-  --clr-grey-1: #ddd;
-  --clr-grey-2: #eee;
   /* main colors */
-  --clr-yellow: #f7dc03;
+  --clr-black: #000;
+  --clr-white: #f0f0f0;
   --clr-red: #be3144;
   --clr-blue: #46567d;
   --clr-gray: #303841;
@@ -21,7 +16,7 @@
   --radius-1: 0.25rem;
   --radius-2: 0.5rem;
   /* fonts */
-  --ff-1: "Montserrat", Courier New, Courier;
+  --ff-1: "raleway", Courier New, Courier;
   --ff-2: "monospace", Arial, Helvetica, sans-serif;
   /* shadows */
   --shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
@@ -91,9 +86,10 @@ a:-webkit-any-link {
 /* * ----- GLOBAL CLASSES ----- */
 .sub-title {
   /* typography */
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   letter-spacing: 1px;
+  font-style: italic;
   /* visuals */
   opacity: 0.8;
 }
@@ -169,7 +165,7 @@ a:-webkit-any-link {
 #projects {
   /* box model */
   padding-top: 6rem;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
   margin: auto;
   /* typography */
   text-align: center;
@@ -189,7 +185,7 @@ a:-webkit-any-link {
 
 .projects-grid {
   /* box model */
-  padding: 5rem 2rem;
+  padding: 3rem 0;
   /* visuals */
   display: flex;
   justify-content: center;
@@ -265,7 +261,7 @@ a:-webkit-any-link {
   /* box model */
   padding: 0.5rem 0;
   /* typography */
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 600;
 }
 
