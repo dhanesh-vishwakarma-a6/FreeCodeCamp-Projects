@@ -101,6 +101,7 @@ a:-webkit-any-link {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
   /* box model */
   width: 100%;
   /* visuals */
@@ -120,7 +121,7 @@ a:-webkit-any-link {
   /* box model */
   padding: 1.5rem;
   /* typography */
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
   text-transform: capitalize;
   /* visuals */
@@ -168,8 +169,7 @@ a:-webkit-any-link {
   /* box model */
   width: fit-content;
   padding-bottom: 0.25rem;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
+  border-bottom: 2px solid;
   margin: auto;
 }
 
@@ -220,6 +220,7 @@ a:-webkit-any-link {
   color: transparent;
 }
 
+/* --- show all btn --- */
 .btn-show-all {
   /* typography */
   font-size: 1.2rem;
@@ -233,11 +234,17 @@ a:-webkit-any-link {
 .btn-show-all > i {
   /* box model */
   margin-left: 8px;
+  transition: transform 300ms ease-in-out;
 }
 
+/* -- hover effect on both button & icon */
 .btn-show-all:hover {
   /* visuals */
   background-color: var(--clr-red);
+}
+
+.btn-show-all:hover i {
+  transform: translateX(4px);
 }
 
 /* * ----- CONTACT ----- */
@@ -277,6 +284,15 @@ a:-webkit-any-link {
   transform: translateY(8px);
 }
 
+/* * ----- FOOTER ----- */
+footer {
+  /* box model */
+  height: 3rem;
+  border-top: 3px solid var(--clr-red);
+  /* visuals */
+  background-color: var(--clr-gray);
+}
+
 /* 
 *===========
 *MEDIA QUERY
@@ -298,11 +314,9 @@ a:-webkit-any-link {
   #navbar {
     justify-content: center;
   }
-
   .nav-list {
     margin: 0;
   }
-
   .nav-link {
     padding: 1rem;
   }
@@ -311,7 +325,6 @@ a:-webkit-any-link {
   .sub-title {
     font-size: 1rem;
   }
-
   /* * --- PROJECTS --- */
   .projects-heading {
     /* box model */
@@ -325,7 +338,6 @@ a:-webkit-any-link {
     /* box model */
     padding: 4rem 1rem;
   }
-
   #contact h2 {
     /* typography */
     font-size: 2rem;
