@@ -208,6 +208,16 @@ a:-webkit-any-link {
   text-transform: capitalize;
   /* visuals */
   background-color: var(--clr-gray);
+  /* misc */
+  transition: var(--transition);
+}
+
+.project-title:hover {
+  background-color: var(--clr-red);
+}
+
+.code {
+  display: none;
 }
 
 .btn {
