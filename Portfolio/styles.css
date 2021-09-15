@@ -52,11 +52,9 @@ h4 {
 
 h1 {
   font-size: 2.5rem;
-  font-weight: 600;
 }
 h2 {
   font-size: 2rem;
-  font-weight: 500;
 }
 h3 {
   font-size: 1.5rem;
@@ -80,11 +78,12 @@ a:-webkit-any-link {
 /* * ----- GLOBAL CLASSES ----- */
 .sub-title {
   /* typography */
+  font-size: 1.2rem;
   font-weight: 400;
   text-align: center;
   letter-spacing: 1px;
   font-style: italic;
-  /* visuals */
+  /* misc */
   opacity: 0.8;
 }
 
@@ -271,4 +270,31 @@ a:-webkit-any-link {
 
 .contact-detail:hover {
   transform: translateY(8px);
+}
+
+/* 
+*===========
+*MEDIA QUERY
+*===========
+*/
+
+@media (max-width: 375px) {
+  /* * --- PROJECTS --- */
+  .projects-heading {
+    /* box model */
+    border: none;
+    /* typography */
+    text-decoration: underline;
+  }
+
+  /* * --- CONTACT --- */
+  #contact {
+    /* box model */
+    padding: 4rem 1rem;
+  }
+
+  #contact h2 {
+    /* typography */
+    font-size: 2rem;
+  }
 }
