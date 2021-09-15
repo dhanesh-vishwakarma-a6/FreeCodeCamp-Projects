@@ -58,9 +58,11 @@ h4 {
 
 h1 {
   font-size: 2.5rem;
+  font-weight: 600;
 }
 h2 {
   font-size: 2rem;
+  font-weight: 500;
 }
 h3 {
   font-size: 1.5rem;
@@ -71,18 +73,6 @@ li {
 }
 
 /* * ----- GLOBAL CLASSES ----- */
-.title {
-  font-weight: 600;
-}
-
-.sub-title {
-  /* typography */
-  font-weight: 400;
-  text-align: center;
-  letter-spacing: 1px;
-  /* visuals */
-  opacity: 0.8;
-}
 
 /* * --- NAVBAR --- */
 #navbar {
@@ -136,6 +126,15 @@ li {
   flex-direction: column;
 }
 
+.welcome-sub-title {
+  /* typography */
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  /* visuals */
+  opacity: 0.8;
+}
+
 .highlight {
   /* typography */
   font-weight: 500;
@@ -154,7 +153,7 @@ li {
   background-color: var(--clr-blue);
 }
 
-#projects .title {
+.project-title {
   /* box model */
   width: fit-content;
   padding-bottom: 0.25rem;
