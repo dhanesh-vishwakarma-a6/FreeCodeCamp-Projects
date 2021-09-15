@@ -134,7 +134,7 @@ a:-webkit-any-link {
 /* * ---- WELCOME SECTION ----- */
 #welcome-section {
   /* box model */
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   /* visuals */
   background-color: var(--clr-black);
@@ -189,6 +189,15 @@ a:-webkit-any-link {
   border-radius: 4px;
 }
 
+/* hover effect on project title & code */
+.project-tile:hover .project-title {
+  background-color: var(--clr-red);
+}
+
+.project-tile:hover .code {
+  color: var(--clr-white);
+}
+
 .project-tile img {
   display: block;
   width: 100%;
@@ -207,12 +216,8 @@ a:-webkit-any-link {
   transition: var(--transition);
 }
 
-.project-title:hover {
-  background-color: var(--clr-red);
-}
-
 .code {
-  display: none;
+  color: transparent;
 }
 
 .btn-show-all {
@@ -279,6 +284,34 @@ a:-webkit-any-link {
 */
 
 @media (max-width: 375px) {
+  /* * --- GLOBAL STYLES --- */
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  /* * --- NAVBAR --- */
+  #navbar {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0;
+  }
+
+  .nav-link {
+    padding: 1rem;
+  }
+
+  /* * --- WELCOME SECTION --- */
+  .sub-title {
+    font-size: 1rem;
+  }
+
   /* * --- PROJECTS --- */
   .projects-heading {
     /* box model */
