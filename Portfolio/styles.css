@@ -9,9 +9,11 @@
   --clr-white-2: #f0f0f0;
   --clr-grey-1: #ddd;
   --clr-grey-2: #eee;
+  /* main colors */
   --clr-yellow: #f7dc03;
   --clr-red: #be3144;
   --clr-blue: #46567d;
+  --clr-gray: #303841;
   /* spacings */
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
@@ -72,6 +74,14 @@ li {
   display: inline;
 }
 
+a,
+a:active,
+a:hover,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* * ----- GLOBAL CLASSES ----- */
 
 /* * --- NAVBAR --- */
@@ -102,7 +112,6 @@ li {
   font-size: 1.2rem;
   font-weight: 500;
   text-transform: capitalize;
-  text-decoration: none;
   /* visuals */
   display: block;
   color: var(--clr-white);
@@ -148,12 +157,14 @@ li {
   /* box model */
   padding-top: 4rem;
   margin: auto;
+  /* typography */
+  text-align: center;
   /* visuals */
   color: var(--clr-white);
   background-color: var(--clr-blue);
 }
 
-.project-title {
+.projects-heading {
   /* box model */
   width: fit-content;
   padding-bottom: 0.25rem;
@@ -163,9 +174,34 @@ li {
 }
 
 .projects-grid {
+  /* box model */
+  padding: 5rem 2rem;
   /* visuals */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.project-tile {
+  /* box model */
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.project-tile img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  /* box model */
+  padding: 1rem 0.5rem;
+  /* typography */
+  font-weight: 500;
+  text-transform: capitalize;
+  /* visuals */
+  background-color: var(--clr-gray);
 }
