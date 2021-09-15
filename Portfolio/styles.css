@@ -9,12 +9,6 @@
   --clr-red: #be3144;
   --clr-blue: #46567d;
   --clr-gray: #303841;
-  /* spacings */
-  --spacing-1: 0.25rem;
-  --spacing-2: 0.5rem;
-  --spacing-3: 1rem;
-  --radius-1: 0.25rem;
-  --radius-2: 0.5rem;
   /* fonts */
   --ff-1: "raleway", Courier New, Courier;
   --ff-2: "monospace", Arial, Helvetica, sans-serif;
@@ -132,7 +126,6 @@ a:-webkit-any-link {
   text-transform: capitalize;
   /* visuals */
   display: block;
-  color: var(--clr-white);
 }
 
 .nav-link:hover {
@@ -145,7 +138,6 @@ a:-webkit-any-link {
   width: 100vw;
   height: 100vh;
   /* visuals */
-  color: var(--clr-white);
   background-color: var(--clr-black);
   display: flex;
   justify-content: center;
@@ -170,7 +162,6 @@ a:-webkit-any-link {
   /* typography */
   text-align: center;
   /* visuals */
-  color: var(--clr-white);
   background-color: var(--clr-blue);
 }
 
