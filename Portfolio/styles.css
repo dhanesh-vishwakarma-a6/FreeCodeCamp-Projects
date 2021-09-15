@@ -82,6 +82,10 @@ a:visited {
   text-decoration: none;
 }
 
+a:-webkit-any-link {
+  cursor: pointer;
+}
+
 /* * ----- GLOBAL CLASSES ----- */
 
 /* * --- NAVBAR --- */
@@ -155,7 +159,8 @@ a:visited {
 /* * ----- PROJECTS ----- */
 #projects {
   /* box model */
-  padding-top: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
   margin: auto;
   /* typography */
   text-align: center;
@@ -186,7 +191,6 @@ a:visited {
 .project-tile {
   /* box model */
   margin: 1rem;
-  cursor: pointer;
   border-radius: 4px;
 }
 
@@ -204,4 +208,32 @@ a:visited {
   text-transform: capitalize;
   /* visuals */
   background-color: var(--clr-gray);
+}
+
+.btn {
+  /* box model */
+  padding: 0.5rem 1rem;
+  /* visuals */
+  display: inline-block;
+  border-radius: 0.25rem;
+}
+
+.btn-show-all {
+  /* typography */
+  font-size: 1.2rem;
+  font-weight: 500;
+  /* visuals */
+  background-color: var(--clr-gray);
+  /* misc */
+  transition: var(--transition);
+}
+
+.btn-show-all > i {
+  /* box model */
+  margin-left: 8px;
+}
+
+.btn-show-all:hover {
+  /* visuals */
+  background-color: var(--clr-red);
 }
