@@ -1,5 +1,5 @@
 /* * --- FONTS --- */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 /* * --- ROOT --- */
 :root {
@@ -38,6 +38,8 @@ html {
   box-sizing: border-box;
   /* typography */
   font-family: var(--ff-1);
+  /* visuals */
+  color: var(--clr-white);
   /* misc */
   scroll-behavior: smooth;
 }
@@ -56,6 +58,7 @@ h3,
 h4 {
   /* typography */
   letter-spacing: 2px;
+  text-align: center;
 }
 
 h1 {
@@ -78,7 +81,6 @@ a,
 a:active,
 a:hover,
 a:visited {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -87,6 +89,22 @@ a:-webkit-any-link {
 }
 
 /* * ----- GLOBAL CLASSES ----- */
+.sub-title {
+  /* typography */
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+  /* visuals */
+  opacity: 0.8;
+}
+
+.btn {
+  /* box model */
+  padding: 0.5rem 1rem;
+  /* visuals */
+  display: inline-block;
+  border-radius: 0.25rem;
+}
 
 /* * --- NAVBAR --- */
 #navbar {
@@ -137,15 +155,6 @@ a:-webkit-any-link {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.welcome-sub-title {
-  /* typography */
-  font-weight: 400;
-  text-align: center;
-  letter-spacing: 1px;
-  /* visuals */
-  opacity: 0.8;
 }
 
 .highlight {
@@ -220,14 +229,6 @@ a:-webkit-any-link {
   display: none;
 }
 
-.btn {
-  /* box model */
-  padding: 0.5rem 1rem;
-  /* visuals */
-  display: inline-block;
-  border-radius: 0.25rem;
-}
-
 .btn-show-all {
   /* typography */
   font-size: 1.2rem;
@@ -246,4 +247,41 @@ a:-webkit-any-link {
 .btn-show-all:hover {
   /* visuals */
   background-color: var(--clr-red);
+}
+
+/* * ----- CONTACT ----- */
+#contact {
+  /* box model */
+  padding: 4rem 2rem;
+  /* visuals */
+  background-color: var(--clr-gray);
+}
+
+#contact header {
+  margin: 2rem 0;
+}
+
+#contact h2 {
+  /* box model */
+  padding: 0.5rem 0;
+  /* typography */
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.contact-link {
+  /* visuals */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-detail {
+  /* typography */
+  font-size: 1.5rem;
+  transition: transform 300ms ease-in-out;
+}
+
+.contact-detail:hover {
+  transform: translateY(8px);
 }
