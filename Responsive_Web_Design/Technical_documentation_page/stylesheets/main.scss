@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+@import "variables";
+
+// GLOBAL STYLES
+*,
+html {
+  // box model
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // typography
+  font-family: $ff-1;
+  // misc
+  scroll-behavior: smooth;
+}
+
+// HEADINGS
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+body {
+  background-color: $main-gray-1;
+}
+
+// * NAVBAR
+#navbar {
+  // position
+  position: fixed;
+  // box model
+  width: 20rem;
+  height: 100%;
+  border-right: 3px groove grey;
+
+  header {
+    text-align: center;
+    padding: $space-3;
+  }
+
+  ul {
+    // box model
+    height: 100%;
+    // visuals
+    display: block;
+    overflow-x: hidden;
+    // hides the scroll bar but keeps the functionality
+    -ms-overflow-style: none; // IE and Edge
+    scrollbar-width: none; // Firefox
+  }
+
+  // hides the scroll bar but keeps the functionality
+  ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  li {
+    // box model
+    width: 100%;
+    border-top: 1px solid;
+    list-style: none;
+  }
+
+  a {
+    // visuals
+    display: block;
+    // box model
+    padding: 1rem 1.5rem;
+    // typography
+    text-decoration: none;
+    // misc
+    cursor: pointer;
+  }
+
+  a:hover {
+    background-color: $main-gray-2;
+  }
+
+  .nav-link:link,
+  .nav-link:active,
+  .nav-link:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+// MAIN DOCUMENTATION
+#main-doc {
+  // box model
+  padding: $space-3;
+  padding-top: 0;
+  margin-left: 20rem;
+  // typography
+  line-height: 1.4;
+
+  .main-section,
+  .main-section p,
+  .main-section ul,
+  .main-section ul li {
+    // box model
+    padding: $space-2;
+    padding-left: $space-3;
+  }
+
+  .main-section ul li {
+    // box model
+    margin-left: 2rem;
+  }
+
+  .main-section code {
+    // position
+    position: relative;
+    // visuals
+    display: block;
+    background-color: $main-gray-2;
+    // box model
+    padding: $space-3;
+    margin: $space-2;
+    border-radius: $raidus-1;
+    // typography
+    font-family: $ff-2;
+    text-align: left;
+    white-space: pre-line;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+  }
+}
+
+@import "mediaQueries";

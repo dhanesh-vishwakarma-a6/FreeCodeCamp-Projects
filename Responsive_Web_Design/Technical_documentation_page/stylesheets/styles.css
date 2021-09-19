@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", Courier New, Courier, monospace;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+body {
+  background-color: #ddd;
+}
+
+#navbar {
+  position: fixed;
+  width: 20rem;
+  height: 100%;
+  border-right: 3px groove grey;
+}
+#navbar header {
+  text-align: center;
+  padding: 1rem;
+}
+#navbar ul {
+  display: block;
+  height: 100%;
+  overflow-x: hidden;
+}
+#navbar ul::-webkit-scrollbar {
+  display: none;
+}
+#navbar ul {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#navbar li {
+  width: 100%;
+  border-top: 1px solid;
+  list-style: none;
+}
+#navbar a {
+  display: block;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+#navbar a:hover {
+  background-color: #eee;
+}
+#navbar .nav-link:link,
+#navbar .nav-link:active,
+#navbar .nav-link:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+#main-doc {
+  line-height: 1.4;
+  padding: 1rem;
+  padding-top: 0;
+  margin-left: 20rem;
+}
+#main-doc .main-section,
+#main-doc .main-section p,
+#main-doc .main-section ul,
+#main-doc .main-section ul li {
+  padding: 0.5rem;
+  padding-left: 1rem;
+}
+#main-doc .main-section ul li {
+  margin-left: 2rem;
+}
+#main-doc .main-section code {
+  position: relative;
+  display: block;
+  background-color: #eee;
+  font-family: "monospace", Arial, Helvetica, sans-serif;
+  text-align: left;
+  white-space: pre-line;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+@media (max-width: 815px) {
+  #navbar {
+    position: relative;
+    width: 100vw;
+    height: 20rem;
+  }
+
+  #main-doc {
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    margin-top: 5rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
