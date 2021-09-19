@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
 html {
   margin: 0;
   padding: 0;
@@ -31,6 +31,21 @@ h2 {
   font-size: 2rem;
 }
 
+p,
+legend {
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+textarea {
+  width: 100%;
+  height: 10rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+}
+
 body {
   color: #f3f3f3;
   background: rgba(27, 27, 50, 0.8);
@@ -38,12 +53,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  background-image: linear-gradient(
-      115deg,
-      rgba(58, 58, 158, 0.8),
-      rgba(136, 136, 206, 0.7)
-    ),
-    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
   font-family: "raleway", roboto, Courier New, Courier, monospace;
 }
 
@@ -98,29 +108,25 @@ body {
   cursor: pointer;
 }
 
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   background-color: #f3f3f3;
   margin: 0.5rem;
   font-size: 1.2rem;
   transform: scale(1.5);
 }
 
-[type="text"],
-[type="email"],
-[type="number"],
+[type=text],
+[type=email],
+[type=number],
 textarea,
 select {
+  padding: 0.5rem;
   opacity: 1;
   font-size: 1.2rem;
   font-family: "raleway", roboto, Courier New, Courier, monospace;
 }
 
-div p {
-  margin-bottom: 0.75rem;
-}
-
-/* * --- MISC --- */
 input.text {
   padding-left: 10px;
 }
@@ -128,6 +134,39 @@ input.text {
 .clue {
   font-size: 1rem;
   opacity: 0.8;
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  [type=text],
+[type=email],
+[type=number],
+textarea,
+select {
+    font-size: 1.2rem;
+  }
+
+  [type=checkbox],
+[type=radio] {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .clue {
+    font-size: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

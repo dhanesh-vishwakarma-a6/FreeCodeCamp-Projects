@@ -1,0 +1,30 @@
+@media (max-width: 540px) {
+  html {
+    font-size: 0.95rem;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  [type="text"],
+  [type="email"],
+  [type="number"],
+  textarea,
+  select {
+    font-size: 1.2rem;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .clue {
+    font-size: 0.8rem;
+  }
+}
