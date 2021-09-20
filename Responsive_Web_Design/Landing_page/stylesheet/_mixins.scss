@@ -1,0 +1,108 @@
+// @mixin shodow {
+//     box-shadow:
+//       0 1px 1px hsl(0deg 0% 0% / 0.075),
+//       0 2px 2px hsl(0deg 0% 0% / 0.075),
+//       0 4px 4px hsl(0deg 0% 0% / 0.075),
+//       0 8px 8px hsl(0deg 0% 0% / 0.075),
+//       0 16px 16px hsl(0deg 0% 0% / 0.075)
+//     ;
+// }
+
+// * MEDIA QUERIES
+@mixin media($device) {
+  // small devices
+  @if ($device == small) {
+    @media (max-width: 375px) {
+      h1 {
+        font-size: 3rem;
+        font-weight: 600;
+      }
+      h2 {
+        font-size: 2.2rem;
+      }
+      h3 {
+        font-size: 1.7rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+
+      /* * ----- NAVBAR ----- */
+      header {
+        flex-direction: column;
+        padding: 0;
+        margin: auto;
+      }
+
+      .nav-link {
+        margin: var(--spacing-2);
+      }
+
+      /* * ----- CAROUSEL IMAGE ----- */
+      .image-carousel {
+        width: 100vw;
+        object-fit: cover;
+      }
+      /* * ----- FORM ----- */
+      #email {
+        width: 80vw;
+      }
+
+      /* * ----- CONTAINER ----- */
+      .container {
+        max-width: 90vw;
+      }
+
+      /* * ----- FEATURE ---- */
+      .feature {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .feature .icon {
+        align-items: flex-end;
+      }
+
+      .feature .desc {
+        width: 80vw;
+        margin: auto;
+      }
+
+      .feature .desc h3 {
+        text-align: center;
+      }
+
+      .feature .desc p {
+        text-align: center;
+      }
+
+      /* * ----- PRICING ----- */
+      #pricing {
+        flex-direction: column;
+      }
+
+      .product .level {
+        font-size: 1.2rem;
+      }
+
+      .product {
+        width: 100%;
+        padding: var(--spacing-1);
+        margin: var(--spacing-3) 0;
+      }
+
+      .product ul li {
+        font-size: 1.2rem;
+      }
+
+      .btn {
+        font-size: 1.2rem;
+        width: 90%;
+        /* spacing */
+        padding: var(--spacing-3);
+        margin: var(--spacing-3);
+      }
+    }
+  }
+}

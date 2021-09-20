@@ -1,0 +1,272 @@
+@import "variables";
+*,
+html {
+  // box model
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // typography
+  font-family: $ff-1;
+  // misc
+  scroll-behavior: smooth;
+}
+
+*::before,
+*::after {
+  // box model
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  // visuals
+  background-color: $main-gray-2;
+}
+
+/* * ----- HEADINGS ----- */
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-top: $space-3;
+}
+
+h1 {
+  font-size: 2.7rem;
+}
+h2 {
+  font-size: 2.2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+li {
+  list-style: none;
+  display: inline;
+}
+
+// HEADER
+#header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $main-gray-2;
+  width: 100vw;
+  height: 4rem;
+  padding: 0 3rem;
+  box-shadow: $shadow;
+
+  // logo
+  .logo {
+    width: 70vw;
+
+    #header-img {
+      width: 12rem;
+      height: 4rem;
+    }
+  }
+
+  // NAVBAR
+  #nav-bar {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    .nav-link {
+      text-transform: capitalize;
+      text-decoration: none;
+      font-weight: 500;
+      margin: $space-3;
+    }
+
+    .nav-link:visited,
+    .nav-link:focus,
+    .nav-link:active {
+      color: inherit;
+    }
+  }
+}
+
+/* CAROUSEL IMAGE */
+.image-carousel {
+  background-image: url("https://steinway.co.uk/wp-content/uploads/2020/03/SteinwayHall-7-1000x588.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 80vw;
+  height: 60vh;
+  margin: auto;
+}
+
+/* * ----- FORM ----- */
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  #form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    #email {
+      font-size: 1.2rem;
+      width: 35vw;
+      padding: $space-2;
+      margin-top: $space-3;
+      border: none;
+      border-radius: $radius-1;
+    }
+
+    #submit {
+      color: $main-white;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      background-color: $main-red;
+      padding: 0.5rem 1rem;
+      margin-top: $space-3;
+      border: none;
+      border-radius: $radius-1;
+      transition: $transition;
+      cursor: pointer;
+
+      // submit hover
+      &:hover {
+        background-color: $main-black;
+      }
+    }
+  }
+}
+
+/* * ----- CONTAINER ----- */
+.container {
+  max-width: 80vw;
+  margin: auto;
+
+  #features {
+    padding-top: 3.5rem;
+
+    .feature {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        text-align: center;
+      }
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        width: 20vw;
+        height: 8rem;
+      }
+
+      .desc {
+        width: 80vw;
+        h3 {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  /* * ----- VIDEO ----- */
+  #howItWorks {
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  /* * ----- PRICING ----- */
+  #pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .product {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: calc(100% / 3);
+      margin: $space-2;
+      border-radius: $radius-1;
+      border: 1px solid $main-black;
+
+      .level {
+        background-color: $main-gray-1;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        padding: 1rem 0;
+      }
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        li {
+          font-weight: 500;
+          text-transform: capitalize;
+          padding: $space-1;
+        }
+      }
+
+      .btn {
+        background-color: $main-red;
+        color: var(--clr-white);
+        text-transform: uppercase;
+        padding: $space-2 $space-3;
+        margin: $space-3 0;
+        border: none;
+        border-radius: $radius-1;
+        transition: $transition;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $main-black;
+        }
+      }
+    }
+  }
+}
+
+/* * ----- FOOTER ----- */
+footer {
+  background-color: $main-gray-1;
+  text-align: center;
+  padding: $space-3 0;
+  margin-top: $space-3;
+
+  ul {
+    padding: $space-2;
+
+    .nav-link {
+      text-transform: capitalize;
+      text-decoration: none;
+      font-weight: 500;
+      margin: $space-3;
+    }
+  }
+
+  .copyright {
+    text-transform: capitalize;
+  }
+}

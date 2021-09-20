@@ -1,0 +1,20 @@
+// fonts import from google apis
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+// main colors
+$main-black: hsl(0deg, 0%, 0%);
+$main-white: hsl(0deg, 0%, 100%);
+$main-gray-1: hsl(0deg, 0%, 87%);
+$main-gray-2: hsl(0deg, 0%, 93%);
+$main-red: hsl(358deg, 72%, 44%);
+// fonts
+$ff-1: "raleway", Courier New, Courier, monospace;
+// spacings
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 1rem;
+$radius-1: 0.25rem;
+$radius-2: 0.5rem;
+// shadow
+$shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
+// transiton
+$transition: all 300ms linear;
