@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 *,
 html {
   // box model
@@ -23,7 +24,6 @@ body {
   background-color: $main-gray-2;
 }
 
-/* * ----- HEADINGS ----- */
 h1,
 h2,
 h3,
@@ -52,14 +52,12 @@ li {
 // HEADER
 #header {
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-box(center, center);
   background-color: $main-gray-2;
   width: 100vw;
   height: 4rem;
   padding: 0 3rem;
-  box-shadow: $shadow;
+  @include layred-shodow();
 
   // logo
   .logo {
@@ -74,9 +72,7 @@ li {
   // NAVBAR
   #nav-bar {
     ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-box(center, center);
       flex-direction: row;
     }
 
@@ -95,7 +91,6 @@ li {
   }
 }
 
-/* CAROUSEL IMAGE */
 .image-carousel {
   background-image: url("https://steinway.co.uk/wp-content/uploads/2020/03/SteinwayHall-7-1000x588.jpg");
   background-position: center;
@@ -106,18 +101,11 @@ li {
   margin: auto;
 }
 
-/* * ----- FORM ----- */
 .form-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include flex-box(center, center, column);
 
   #form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include flex-box(center, center, column);
 
     #email {
       font-size: 1.2rem;
@@ -130,13 +118,16 @@ li {
 
     #submit {
       color: $main-white;
+      background-color: $main-red;
+
       font-size: 1.2rem;
       text-transform: uppercase;
-      background-color: $main-red;
+
       padding: 0.5rem 1rem;
       margin-top: $space-3;
       border: none;
       border-radius: $radius-1;
+
       transition: $transition;
       cursor: pointer;
 
@@ -148,7 +139,6 @@ li {
   }
 }
 
-/* * ----- CONTAINER ----- */
 .container {
   max-width: 80vw;
   margin: auto;
@@ -157,18 +147,10 @@ li {
     padding-top: 3.5rem;
 
     .feature {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      h2 {
-        text-align: center;
-      }
+      @include flex-box();
 
       .icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-box();
         font-size: 4rem;
         width: 20vw;
         height: 8rem;
@@ -183,25 +165,17 @@ li {
     }
   }
 
-  /* * ----- VIDEO ----- */
   #howItWorks {
-    display: flex;
-    justify-content: center;
+    @include flex-box();
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
 
-  /* * ----- PRICING ----- */
   #pricing {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-box();
 
     .product {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      @include flex-box(center, center, column);
       width: calc(100% / 3);
       margin: $space-2;
       border-radius: $radius-1;
@@ -217,10 +191,7 @@ li {
       }
 
       ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flex-box(center, center, column);
 
         li {
           font-weight: 500;
@@ -230,13 +201,16 @@ li {
       }
 
       .btn {
-        background-color: $main-red;
         color: var(--clr-white);
+        background-color: $main-red;
+
         text-transform: uppercase;
+
         padding: $space-2 $space-3;
         margin: $space-3 0;
         border: none;
         border-radius: $radius-1;
+
         transition: $transition;
         cursor: pointer;
 
@@ -248,7 +222,6 @@ li {
   }
 }
 
-/* * ----- FOOTER ----- */
 footer {
   background-color: $main-gray-1;
   text-align: center;
@@ -262,6 +235,7 @@ footer {
       text-transform: capitalize;
       text-decoration: none;
       font-weight: 500;
+
       margin: $space-3;
     }
   }
@@ -270,3 +244,5 @@ footer {
     text-transform: capitalize;
   }
 }
+
+@include media-queries(small);

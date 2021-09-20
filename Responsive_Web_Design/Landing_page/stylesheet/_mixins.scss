@@ -1,18 +1,44 @@
-// @mixin shodow {
-//     box-shadow:
-//       0 1px 1px hsl(0deg 0% 0% / 0.075),
-//       0 2px 2px hsl(0deg 0% 0% / 0.075),
-//       0 4px 4px hsl(0deg 0% 0% / 0.075),
-//       0 8px 8px hsl(0deg 0% 0% / 0.075),
-//       0 16px 16px hsl(0deg 0% 0% / 0.075)
-//     ;
+@mixin layred-shodow {
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+
+// flex box
+@mixin flex-box($main: center, $cross: center, $direction: row) {
+  display: flex;
+  justify-content: $main;
+  align-items: $cross;
+  flex-direction: $direction;
+}
+
+// Theme
+@mixin theme($color, $background) {
+  color: $color;
+  background-color: $background;
+}
+
+// @mixin theme-btn($col, $bg, $pad, $mar, $rad, $trans) {
+//   color: $col;
+//   background-color: $bg;
+
+//   font-size: 1.2rem;
+//   text-transform: uppercase;
+
+//   padding: $pad $pad*2 ;
+//   margin-top: $space-3;
+//   border: none;
+//   border-radius: $rad;
+
+//   transition: $trans;
+//   cursor: pointer;
 // }
 
 // * MEDIA QUERIES
-@mixin media($device) {
+@mixin media-queries($device) {
   // small devices
   @if ($device == small) {
-    @media (max-width: 375px) {
+    @media (max-width: 540px) {
       h1 {
         font-size: 3rem;
         font-weight: 600;
@@ -27,81 +53,88 @@
         font-size: 1.2rem;
       }
 
-      /* * ----- NAVBAR ----- */
-      header {
+      #header {
         flex-direction: column;
+        height: 7rem;
         padding: 0;
-        margin: auto;
+
+        .logo {
+          @include flex-box(center, center);
+        }
+
+        #nav-bar {
+          margin-top: $space-3;
+
+          .nav-link {
+            margin: $space-3;
+          }
+        }
       }
 
-      .nav-link {
-        margin: var(--spacing-2);
-      }
-
-      /* * ----- CAROUSEL IMAGE ----- */
       .image-carousel {
         width: 100vw;
         object-fit: cover;
       }
-      /* * ----- FORM ----- */
-      #email {
-        width: 80vw;
+      .form-section {
+        #form {
+          #email {
+            width: 100%;
+          }
+        }
       }
 
-      /* * ----- CONTAINER ----- */
       .container {
         max-width: 90vw;
-      }
 
-      /* * ----- FEATURE ---- */
-      .feature {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+        #features {
+          h2 {
+            text-decoration: underline;
+          }
+          .feature {
+            @include flex-box(center, center);
 
-      .feature .icon {
-        align-items: flex-end;
-      }
+            .icon {
+              align-items: flex-end;
+            }
 
-      .feature .desc {
-        width: 80vw;
-        margin: auto;
-      }
+            .desc {
+              width: 80vw;
+              margin: auto;
 
-      .feature .desc h3 {
-        text-align: center;
-      }
+              h3,
+              p {
+                text-align: center;
+              }
+            }
+          }
+        }
 
-      .feature .desc p {
-        text-align: center;
-      }
+        #pricing {
+          flex-direction: column;
 
-      /* * ----- PRICING ----- */
-      #pricing {
-        flex-direction: column;
-      }
+          .product {
+            width: 100%;
+            padding: $space-1;
+            margin: 1rem 0;
 
-      .product .level {
-        font-size: 1.2rem;
-      }
+            .level {
+              font-size: 1.2rem;
+            }
 
-      .product {
-        width: 100%;
-        padding: var(--spacing-1);
-        margin: var(--spacing-3) 0;
-      }
-
-      .product ul li {
-        font-size: 1.2rem;
-      }
-
-      .btn {
-        font-size: 1.2rem;
-        width: 90%;
-        /* spacing */
-        padding: var(--spacing-3);
-        margin: var(--spacing-3);
+            ul {
+              li {
+                font-size: 1.2rem;
+              }
+            }
+            .btn {
+              font-size: 1.2rem;
+              width: 90%;
+              /* spacing */
+              padding: $space-3;
+              margin: $space-3;
+            }
+          }
+        }
       }
     }
   }
