@@ -117,21 +117,7 @@ li {
     }
 
     #submit {
-      color: $main-white;
-      background-color: $main-red;
-
-      font-size: 1.2rem;
-      text-transform: uppercase;
-
-      padding: 0.5rem 1rem;
-      margin-top: $space-3;
-      border: none;
-      border-radius: $radius-1;
-
-      transition: $transition;
-      cursor: pointer;
-
-      // submit hover
+      @include theme-btn($main-white, $main-red);
       &:hover {
         background-color: $main-black;
       }
@@ -201,19 +187,7 @@ li {
       }
 
       .btn {
-        color: var(--clr-white);
-        background-color: $main-red;
-
-        text-transform: uppercase;
-
-        padding: $space-2 $space-3;
-        margin: $space-3 0;
-        border: none;
-        border-radius: $radius-1;
-
-        transition: $transition;
-        cursor: pointer;
-
+        @include theme-btn($main-white, $main-red, 1rem);
         &:hover {
           background-color: $main-black;
         }
