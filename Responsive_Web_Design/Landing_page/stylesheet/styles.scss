@@ -34,15 +34,7 @@ h4 {
   margin-top: $space-3;
 }
 
-h1 {
-  font-size: 2.7rem;
-}
-h2 {
-  font-size: 2.2rem;
-}
-h3 {
-  font-size: 1.5rem;
-}
+@include headings(2.7rem, 1, 3);
 
 li {
   list-style: none;
@@ -52,11 +44,10 @@ li {
 // HEADER
 #header {
   position: fixed;
-  @include flex-box(center, center);
-  background-color: $main-gray-2;
-  width: 100vw;
-  height: 4rem;
-  padding: 0 3rem;
+  @include flex-box();
+  @include theme(inherit, $main-gray-2);
+  @include box-model(100vw, 4rem);
+  @include padding(0 3rem);
   @include layred-shodow();
 
   // logo
@@ -72,8 +63,7 @@ li {
   // NAVBAR
   #nav-bar {
     ul {
-      @include flex-box(center, center);
-      flex-direction: row;
+      @include flex-box();
     }
 
     .nav-link {

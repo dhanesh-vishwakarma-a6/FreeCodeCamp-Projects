@@ -12,10 +12,41 @@
   flex-direction: $direction;
 }
 
-// Theme
-@mixin theme($color, $background) {
-  color: $color;
-  background-color: $background;
+// Typography
+@mixin headings($size: 3rem, $start: 1, $end: 6) {
+  // check header count
+  @if $start < 1 or $end > 6 {
+    @error "heading count must be within h1 - h6";
+  }
+
+  // generate headers
+  @for $count from $start through $end {
+    h#{$count} {
+      font-size: $size;
+    }
+    $size: $size - 0.5rem; // decrement in the font-size
+  }
+}
+
+// Visuals
+@mixin theme($col, $bg) {
+  color: $col;
+  background-color: $bg;
+}
+// Box model
+@mixin box-model($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin padding($values...) {
+  @each $var in $values {
+    padding: #{$var};
+  }
+}
+@mixin margin($values...) {
+  @each $var in $values {
+    margin: #{$var};
+  }
 }
 
 @mixin theme-btn($col, $bg, $font-size: 1.2rem) {
@@ -43,12 +74,7 @@
         font-size: 3rem;
         font-weight: 600;
       }
-      h2 {
-        font-size: 2.2rem;
-      }
-      h3 {
-        font-size: 1.7rem;
-      }
+      @include headings(2.2rem, 2, 3);
       p {
         font-size: 1.2rem;
       }
@@ -63,10 +89,11 @@
         }
 
         #nav-bar {
-          margin-top: $space-3;
+          margin-top: $space-2;
 
           .nav-link {
             margin: $space-3;
+            font-weight: 400;
           }
         }
       }
@@ -91,7 +118,7 @@
             text-decoration: underline;
           }
           .feature {
-            @include flex-box(center, center);
+            @include flex-box(center, center, column);
 
             .icon {
               align-items: flex-end;

@@ -1,36 +1,10 @@
-/* --- FONT --- */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
-/* --- ROOT --- */
-:root {
-  /* colors */
-  --clr-black: #000;
-  --clr-white: #fff;
-  --clr-grey-1: #ddd;
-  --clr-grey-2: #eee;
-  --clr-yellow: #f1c40f;
-  --clr-red: #c22026;
-  /* fonts */
-  --ff-1: "raleway", Courier New, Courier, monospace;
-  /* spacings */
-  --spacing-1: 0.25rem;
-  --spacing-2: 0.5rem;
-  --spacing-3: 1rem;
-  --radius-1: 0.25rem;
-  --radius-2: 0.5rem;
-  /* shadows */
-  --shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
-  /* transitions */
-  --transition: all 300ms linear;
-}
-
 *,
 html {
-  /* font */
-  font-family: var(--ff-1);
-  /* spacing */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "raleway", Courier New, Courier, monospace;
   scroll-behavior: smooth;
 }
 
@@ -41,46 +15,29 @@ html {
 }
 
 body {
-  background-color: var(--clr-grey-2);
+  background-color: #ededed;
 }
 
-/* * ----- HEADINGS ----- */
 h1,
 h2,
 h3,
 h4 {
-  /* fonts */
   text-align: center;
   text-transform: capitalize;
   letter-spacing: 1px;
-  /* spacings */
-  margin-top: var(--spacing-3);
+  margin-top: 1rem;
 }
 
 h1 {
   font-size: 2.7rem;
 }
+
 h2 {
   font-size: 2.2rem;
 }
-h3 {
-  font-size: 1.5rem;
-}
 
-@media (max-width: 375px) {
-  h1 {
-    font-size: 3rem;
-    font-weight: 600;
-  }
-  h2 {
-    font-size: 2.2rem;
-  }
-  h3 {
-    font-size: 1.7rem;
-  }
-  p {
-    font-size: 1.2rem;
-  }
+h3 {
+  font-size: 1.7rem;
 }
 
 li {
@@ -88,334 +45,286 @@ li {
   display: inline;
 }
 
-/* * ----- HEADER ----- */
 #header {
-  /* display */
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--clr-grey-2);
-  /* dimension */
+  flex-direction: row;
+  color: inherit;
+  background-color: #ededed;
   width: 100vw;
   height: 4rem;
-  /* spacing */
   padding: 0 3rem;
-  /* outlook */
-  box-shadow: var(--shadow);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 2px 2px rgba(0, 0, 0, 0.075), 0 4px 4px rgba(0, 0, 0, 0.075), 0 8px 8px rgba(0, 0, 0, 0.075), 0 16px 16px rgba(0, 0, 0, 0.075);
 }
-
-.logo {
+#header .logo {
   width: 70vw;
 }
-
-#header-img {
+#header .logo #header-img {
   width: 12rem;
   height: 4rem;
 }
-
-#nav-bar ul {
+#header #nav-bar ul {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
-
-.nav-link {
+#header #nav-bar .nav-link {
   text-transform: capitalize;
   text-decoration: none;
   font-weight: 500;
-  margin: var(--spacing-3);
+  margin: 1rem;
 }
-
-.nav-link:visited,
-.nav-link:focus,
-.nav-link:active {
+#header #nav-bar .nav-link:visited,
+#header #nav-bar .nav-link:focus,
+#header #nav-bar .nav-link:active {
   color: inherit;
 }
 
-/* CAROUSEL IMAGE */
 .image-carousel {
   background-image: url("https://steinway.co.uk/wp-content/uploads/2020/03/SteinwayHall-7-1000x588.jpg");
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
-  /* dimension */
   width: 80vw;
   height: 60vh;
-  /* spacing */
   margin: auto;
 }
 
-/* * ----- FORM ----- */
 .form-section {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
-#form {
-  /* display */
+.form-section #form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
-#email {
-  /* font */
+.form-section #form #email {
   font-size: 1.2rem;
-  /* dimension */
   width: 35vw;
-  /* spacing */
-  padding: var(--spacing-2);
-  margin-top: var(--spacing-3);
-  /* outlook */
+  padding: 0.5rem;
+  margin-top: 1rem;
   border: none;
-  border-radius: var(--radius-1);
+  border-radius: 0.25rem;
 }
-
-#submit {
-  /* font */
-  color: var(--clr-white);
+.form-section #form #submit {
+  color: white;
+  background-color: #c11f25;
   font-size: 1.2rem;
   text-transform: uppercase;
-  background-color: var(--clr-red);
-  /* spacing */
-  padding: var(--spacing-2) var(--spacing-3);
-  margin-top: var(--spacing-3);
-  /* outlook */
+  padding: 0.5rem 1rem;
+  margin: 1rem;
   border: none;
-  border-radius: var(--radius-1);
-  transition: var(--transition);
+  border-radius: 0.25rem;
+  transition: all 300ms linear;
   cursor: pointer;
 }
-
-#submit:hover {
-  background-color: var(--clr-black);
+.form-section #form #submit:hover {
+  background-color: black;
 }
 
-/* * ----- CONTAINER ----- */
 .container {
   max-width: 80vw;
   margin: auto;
 }
-
-/* * ----- FEATURES ----- */
-#features {
+.container #features {
   padding-top: 3.5rem;
 }
-.feature {
-  /* display */
+.container #features .feature {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
-
-.feature h2 {
-  text-align: center;
-}
-
-.feature .icon {
-  /* display */
+.container #features .feature .icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* font */
+  flex-direction: row;
   font-size: 4rem;
-  /* dimension */
   width: 20vw;
   height: 8rem;
 }
-
-.feature .desc {
+.container #features .feature .desc {
   width: 80vw;
 }
-
-.feature .desc h3 {
+.container #features .feature .desc h3 {
   text-align: left;
 }
-
-/* * ----- VIDEO ----- */
-#howItWorks {
-  /* display */
+.container #howItWorks {
   display: flex;
   justify-content: center;
-  /* spacings */
-  /* margin: 5rem 0; */
+  align-items: center;
+  flex-direction: row;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-
-/* * ----- PRICING ----- */
-#pricing {
+.container #pricing {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
-
-.product {
-  /* display */
+.container #pricing .product {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* dimensions */
-  width: calc(100% / 3);
-  /* spacings */
-  margin: var(--spacing-2);
-  /* outlook */
-  border-radius: var(--radius-1);
-  border: 1px solid var(--clr-black);
+  width: 33.3333333333%;
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid black;
 }
-
-.product .level {
-  /* display */
-  background-color: var(--clr-grey-1);
-  /* font */
+.container #pricing .product .level {
+  background-color: #dedede;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  /* dimension */
   width: 100%;
-  /* spacings */
-  padding: var(--spacing-3) 0;
+  padding: 1rem 0;
 }
-
-.product ul {
-  /* display */
+.container #pricing .product ul {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
-.product ul li {
+.container #pricing .product ul li {
   font-weight: 500;
   text-transform: capitalize;
-  padding: var(--spacing-1);
+  padding: 0.25rem;
 }
-
-.btn {
-  /* display */
-  background-color: var(--clr-red);
-  /* fonts */
-  color: var(--clr-white);
+.container #pricing .product .btn {
+  color: white;
+  background-color: #c11f25;
+  font-size: 1rem;
   text-transform: uppercase;
-  /* spacing */
-  padding: var(--spacing-2) var(--spacing-3);
-  margin: var(--spacing-3) 0;
-  /* outlook */
+  padding: 0.5rem 1rem;
+  margin: 1rem;
   border: none;
-  border-radius: var(--radius-1);
-  transition: var(--transition);
+  border-radius: 0.25rem;
+  transition: all 300ms linear;
   cursor: pointer;
 }
-
-.btn:hover {
-  background-color: var(--clr-black);
+.container #pricing .product .btn:hover {
+  background-color: black;
 }
 
-/* * ----- FOOTER ----- */
 footer {
-  background-color: var(--clr-grey-1);
-  /* fonts */
+  background-color: #dedede;
   text-align: center;
-  /* spacings */
-  padding: var(--spacing-3) 0;
-  margin-top: var(--spacing-3);
+  padding: 1rem 0;
+  margin-top: 1rem;
 }
-
 footer ul {
-  padding: var(--spacing-2);
+  padding: 0.5rem;
 }
-.copyright {
+footer ul .nav-link {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 1rem;
+}
+footer .copyright {
   text-transform: capitalize;
 }
 
-/* 
-*=======================
-* MEDIA QUERIES (MOBILE)
-*=======================
-*/
-@media (max-width: 375px) {
-  /* * ----- NAVBAR ----- */
-  header {
-    /* display */
+@media (max-width: 540px) {
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  #header {
     flex-direction: column;
-    /* spacings */
+    height: 7rem;
     padding: 0;
-    margin: auto;
+  }
+  #header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  #header #nav-bar {
+    margin-top: 0.5rem;
+  }
+  #header #nav-bar .nav-link {
+    margin: 1rem;
+    font-weight: 400;
   }
 
-  .nav-link {
-    margin: var(--spacing-2);
-  }
-
-  /* * ----- CAROUSEL IMAGE ----- */
   .image-carousel {
     width: 100vw;
     object-fit: cover;
   }
-  /* * ----- FORM ----- */
-  #email {
-    width: 80vw;
+
+  .form-section #form #email {
+    width: 100%;
   }
 
-  /* * ----- CONTAINER ----- */
   .container {
     max-width: 90vw;
   }
-
-  /* * ----- FEATURE ---- */
-  .feature {
-    flex-direction: column;
+  .container #features h2 {
+    text-decoration: underline;
+  }
+  .container #features .feature {
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
-
-  .feature .icon {
+  .container #features .feature .icon {
     align-items: flex-end;
   }
-
-  .feature .desc {
+  .container #features .feature .desc {
     width: 80vw;
     margin: auto;
   }
-
-  .feature .desc h3 {
+  .container #features .feature .desc h3,
+.container #features .feature .desc p {
     text-align: center;
   }
-
-  .feature .desc p {
-    text-align: center;
-  }
-
-  /* * ----- PRICING ----- */
-  #pricing {
+  .container #pricing {
     flex-direction: column;
   }
-
-  .product .level {
-    font-size: 1.2rem;
-  }
-
-  .product {
+  .container #pricing .product {
     width: 100%;
-    padding: var(--spacing-1);
-    margin: var(--spacing-3) 0;
+    padding: 0.25rem;
+    margin: 1rem 0;
   }
-
-  .product ul li {
+  .container #pricing .product .level {
     font-size: 1.2rem;
   }
-
-  .btn {
+  .container #pricing .product ul li {
+    font-size: 1.2rem;
+  }
+  .container #pricing .product .btn {
     font-size: 1.2rem;
     width: 90%;
     /* spacing */
-    padding: var(--spacing-3);
-    margin: var(--spacing-3);
+    padding: 1rem;
+    margin: 1rem;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
