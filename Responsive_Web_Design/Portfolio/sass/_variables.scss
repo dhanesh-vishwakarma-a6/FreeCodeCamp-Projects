@@ -1,0 +1,17 @@
+// font import
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+
+// main colors
+$main-black: #000;
+$main-white: #f0f0f0;
+$main-red: #be3144;
+$main-blue: #46567d;
+$main-gray: #303841;
+// fonts
+$ff-1: "raleway", Courier New, Courier;
+$ff-2: "monospace", Arial, Helvetica, sans-serif;
+// shadows
+$shadow-light: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
+$shadow-dark: 0 5px 15px 5px rgba(0, 0, 0, 0.2);
+// transitions
+$transition: all 300ms linear;

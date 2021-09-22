@@ -1,0 +1,12 @@
+@mixin box-model($width, $height) {
+  width: $width;
+  height: $height;
+  @content;
+}
+
+@mixin flex-box($main: center, $cross: center) {
+  display: flex;
+  justify-content: $main;
+  align-items: $cross;
+  @content;
+}

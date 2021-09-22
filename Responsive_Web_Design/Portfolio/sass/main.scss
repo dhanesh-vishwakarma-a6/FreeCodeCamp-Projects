@@ -1,0 +1,255 @@
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "layout";
+@import "typography";
+
+/* GLOBAL STYLES */
+*,
+html {
+  @include reset();
+  font-family: $ff-1;
+  color: $main-white;
+  scroll-behavior: smooth;
+}
+
+@include psuodo-reset();
+@include nav-anchor-reset();
+@include headings(2.5rem, 1, 3);
+
+h1,
+h2,
+h3,
+h4 {
+  padding: 0.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* GLOBAL CLASSES */
+.flex-box {
+  @include flex-box(center, center);
+}
+
+.sub-title {
+  // typography
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  font-style: italic;
+  // misc
+  opacity: 0.8;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+}
+
+#navbar {
+  // position
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  // box model
+  width: 100%;
+  // visuals
+  @include flex-box(flex-end);
+  background-color: $main-red;
+  box-shadow: $shadow-dark;
+
+  .nav-list {
+    display: flex;
+    margin-right: 2rem;
+
+    .nav-link {
+      // box model
+      padding: 1.5rem;
+      // typography
+      font-size: 1.3rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      // visuals
+      display: block;
+
+      &:hover {
+        background-color: $main-blue;
+      }
+    }
+  }
+}
+
+/* WELCOME SECTION */
+#welcome-section {
+  @include box-model(100%, 100vh);
+  @extend .flex-box;
+  flex-direction: column;
+  background-color: $main-black;
+
+  .highlight {
+    // typography
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: $main-red;
+  }
+}
+
+/* PROJECTS SECTION */
+#projects {
+  // box model
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  margin: auto;
+  text-align: center;
+  // visuals
+  background-color: $main-blue;
+
+  .projects-heading {
+    // box model
+    width: fit-content;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid;
+    margin: auto;
+  }
+
+  .projects-grid {
+    @extend .flex-box;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+
+    .project-tile {
+      margin: 1rem;
+      border-radius: 4px;
+
+      img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .project-title {
+        // box model
+        padding: 1rem 0.5rem;
+        // typography
+        font-weight: 500;
+        text-transform: capitalize;
+        // visuals
+        background-color: $main-gray;
+        transition: $transition;
+      }
+
+      .code {
+        color: transparent;
+      }
+
+      /* hover effect on project title & code */
+      &:hover .project-title {
+        background-color: $main-red;
+      }
+      &:hover .code {
+        color: $main-white;
+      }
+    }
+  }
+
+  .btn-show-all {
+    // typography
+    font-size: 1.2rem;
+    font-weight: 500;
+    // visuals
+    background-color: $main-gray;
+    transition: var(--transition);
+
+    i {
+      margin-left: 8px;
+      transition: transform 300ms ease-in-out;
+    }
+
+    /* -- hover effect on both button & icon */
+    &:hover {
+      background-color: $main-red;
+    }
+
+    &:hover i {
+      transform: translateX(4px);
+    }
+  }
+}
+
+/* CONTACTS SECTION*/
+#contact {
+  // box model
+  padding: 3rem;
+  padding-top: 5rem;
+  background-color: $main-gray;
+
+  header {
+    padding-bottom: 2rem;
+    h2 {
+      padding: 0.5rem 0;
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+  }
+
+  .contact-link {
+    @extend .flex-box;
+    flex-wrap: wrap;
+
+    .contact-detail {
+      font-size: 1.5rem;
+      transition: transform 300ms ease-in-out;
+
+      &:hover {
+        transform: translateY(8px);
+      }
+    }
+  }
+}
+
+/* FOOTER */
+footer {
+  // box model
+  height: 3rem;
+  border-top: 3px solid $main-red;
+  // visuals
+  background-color: $main-gray;
+}
+
+/* MEDIA QUERIES */
+@include breakpoint(small) {
+  /* GLOBAL STYLES */
+  @include headings(2rem, 1, 3);
+  /* *  NAVBAR  */
+  #navbar {
+    justify-content: center;
+  }
+  .nav-list {
+    margin: 0;
+  }
+  .nav-link {
+    padding: 1rem;
+  }
+
+  /* *  WELCOME SECTION  */
+  .sub-title {
+    font-size: 1rem;
+  }
+  /* *  PROJECTS  */
+  .projects-heading {
+    border: none;
+    text-decoration: underline;
+  }
+
+  /* *  CONTACT  */
+  #contact {
+    padding: 3rem 2rem;
+    padding-top: 5rem;
+  }
+  #contact h2 {
+    font-size: 2rem;
+  }
+}

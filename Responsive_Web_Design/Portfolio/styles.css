@@ -1,65 +1,19 @@
-/* * --- FONTS --- */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
-
-/* * --- ROOT --- */
-:root {
-  /* main colors */
-  --clr-black: #000;
-  --clr-white: #f0f0f0;
-  --clr-red: #be3144;
-  --clr-blue: #46567d;
-  --clr-gray: #303841;
-  /* fonts */
-  --ff-1: "raleway", Courier New, Courier;
-  --ff-2: "monospace", Arial, Helvetica, sans-serif;
-  /* shadows */
-  --shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
-  /* transitions */
-  --transition: all 300ms linear;
-}
-
-/* * ----- GLOBAL STYLES -----  */
+/* GLOBAL STYLES */
 *,
 html {
-  /* box model */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* typography */
-  font-family: var(--ff-1);
-  /* visuals */
-  color: var(--clr-white);
-  /* misc */
+  font-family: "raleway", Courier New, Courier;
+  color: #f0f0f0;
   scroll-behavior: smooth;
 }
 
 *::before,
 *::after {
-  /* box model */
   margin: 0;
   padding: 0;
-}
-
-/* * ----- HEADINGS ----- */
-h1,
-h2,
-h3,
-h4 {
-  /* box model */
-  padding: 0.5rem;
-  /* typography */
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.5rem;
 }
 
 li {
@@ -77,273 +31,231 @@ a:-webkit-any-link {
   cursor: pointer;
 }
 
-/* * ----- GLOBAL CLASSES ----- */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  padding: 0.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* GLOBAL CLASSES */
+.flex-box, #contact .contact-link, #projects .projects-grid, #welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .sub-title {
-  /* typography */
   font-size: 1.2rem;
   font-weight: 400;
   text-align: center;
   letter-spacing: 1px;
   font-style: italic;
-  /* misc */
   opacity: 0.8;
 }
 
 .btn {
-  /* box model */
   padding: 0.5rem 1rem;
-  /* visuals */
-  display: inline-block;
   border-radius: 0.25rem;
+  display: inline-block;
 }
 
-/* * --- NAVBAR --- */
 #navbar {
-  /* positioning */
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
-  /* box model */
   width: 100%;
-  /* visuals */
   display: flex;
   justify-content: flex-end;
-  background-color: var(--clr-red);
-  /* misc */
-  box-shadow: 0 2px 0 rgb(0 0 0 / 40%);
+  align-items: center;
+  background-color: #be3144;
+  box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.2);
 }
-
-.nav-list {
+#navbar .nav-list {
   display: flex;
   margin-right: 2rem;
 }
-
-.nav-link {
-  /* box model */
+#navbar .nav-list .nav-link {
   padding: 1.5rem;
-  /* typography */
   font-size: 1.3rem;
   font-weight: 500;
   text-transform: capitalize;
-  /* visuals */
   display: block;
 }
-
-.nav-link:hover {
-  background-color: var(--clr-blue);
+#navbar .nav-list .nav-link:hover {
+  background-color: #46567d;
 }
 
-/* * ---- WELCOME SECTION ----- */
+/* WELCOME SECTION */
 #welcome-section {
-  /* box model */
   width: 100%;
   height: 100vh;
-  /* visuals */
-  background-color: var(--clr-black);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  background-color: #000;
 }
-
-.highlight {
-  /* typography */
+#welcome-section .highlight {
   font-weight: 500;
   letter-spacing: 2px;
-  /* visuals */
-  color: var(--clr-red);
+  color: #be3144;
 }
 
-/* * ----- PROJECTS ----- */
+/* PROJECTS SECTION */
 #projects {
-  /* box model */
   padding-top: 6rem;
   padding-bottom: 3rem;
   margin: auto;
-  /* typography */
   text-align: center;
-  /* visuals */
-  background-color: var(--clr-blue);
+  background-color: #46567d;
 }
-
-.projects-heading {
-  /* box model */
+#projects .projects-heading {
   width: fit-content;
   padding-bottom: 0.25rem;
   border-bottom: 2px solid;
   margin: auto;
 }
-
-.projects-grid {
-  /* box model */
-  padding: 3rem 0;
-  /* visuals */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#projects .projects-grid {
   flex-wrap: wrap;
+  padding: 3rem 0;
 }
-
-.project-tile {
-  /* box model */
+#projects .projects-grid .project-tile {
   margin: 1rem;
   border-radius: 4px;
+  /* hover effect on project title & code */
 }
-
-/* hover effect on project title & code */
-.project-tile:hover .project-title {
-  background-color: var(--clr-red);
-}
-
-.project-tile:hover .code {
-  color: var(--clr-white);
-}
-
-.project-tile img {
+#projects .projects-grid .project-tile img {
   display: block;
   width: 100%;
   object-fit: cover;
 }
-
-.project-title {
-  /* box model */
+#projects .projects-grid .project-tile .project-title {
   padding: 1rem 0.5rem;
-  /* typography */
   font-weight: 500;
   text-transform: capitalize;
-  /* visuals */
-  background-color: var(--clr-gray);
-  /* misc */
-  transition: var(--transition);
+  background-color: #303841;
+  transition: all 300ms linear;
 }
-
-.code {
+#projects .projects-grid .project-tile .code {
   color: transparent;
 }
-
-/* --- show all btn --- */
-.btn-show-all {
-  /* typography */
+#projects .projects-grid .project-tile:hover .project-title {
+  background-color: #be3144;
+}
+#projects .projects-grid .project-tile:hover .code {
+  color: #f0f0f0;
+}
+#projects .btn-show-all {
   font-size: 1.2rem;
   font-weight: 500;
-  /* visuals */
-  background-color: var(--clr-gray);
-  /* misc */
+  background-color: #303841;
   transition: var(--transition);
+  /* -- hover effect on both button & icon */
 }
-
-.btn-show-all > i {
-  /* box model */
+#projects .btn-show-all i {
   margin-left: 8px;
   transition: transform 300ms ease-in-out;
 }
-
-/* -- hover effect on both button & icon */
-.btn-show-all:hover {
-  /* visuals */
-  background-color: var(--clr-red);
+#projects .btn-show-all:hover {
+  background-color: #be3144;
 }
-
-.btn-show-all:hover i {
+#projects .btn-show-all:hover i {
   transform: translateX(4px);
 }
 
-/* * ----- CONTACT ----- */
+/* CONTACTS SECTION*/
 #contact {
-  /* box model */
   padding: 3rem;
   padding-top: 5rem;
-  /* visuals */
-  background-color: var(--clr-gray);
+  background-color: #303841;
 }
-
 #contact header {
   padding-bottom: 2rem;
 }
-
-#contact h2 {
-  /* box model */
+#contact header h2 {
   padding: 0.5rem 0;
-  /* typography */
   font-size: 3.5rem;
   font-weight: 700;
 }
-
-.contact-link {
-  /* visuals */
-  display: flex;
-  justify-content: center;
+#contact .contact-link {
   flex-wrap: wrap;
 }
-
-.contact-detail {
-  /* typography */
+#contact .contact-link .contact-detail {
   font-size: 1.5rem;
   transition: transform 300ms ease-in-out;
 }
-
-.contact-detail:hover {
+#contact .contact-link .contact-detail:hover {
   transform: translateY(8px);
 }
 
-/* * ----- FOOTER ----- */
+/* FOOTER */
 footer {
-  /* box model */
   height: 3rem;
-  border-top: 3px solid var(--clr-red);
-  /* visuals */
-  background-color: var(--clr-gray);
+  border-top: 3px solid #be3144;
+  background-color: #303841;
 }
 
-/* 
-*===========
-*MEDIA QUERY
-*===========
-*/
-
-@media (max-width: 375px) {
-  /* * --- GLOBAL STYLES --- */
+/* MEDIA QUERIES */
+@media only screen and (max-width: 450px) {
+  /* GLOBAL STYLES */
   h1 {
     font-size: 2rem;
   }
+
   h2 {
     font-size: 1.5rem;
   }
+
   h3 {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
-  /* * --- NAVBAR --- */
+
+  /* *  NAVBAR  */
   #navbar {
     justify-content: center;
   }
+
   .nav-list {
     margin: 0;
   }
+
   .nav-link {
     padding: 1rem;
   }
 
-  /* * --- WELCOME SECTION --- */
+  /* *  WELCOME SECTION  */
   .sub-title {
     font-size: 1rem;
   }
-  /* * --- PROJECTS --- */
+
+  /* *  PROJECTS  */
   .projects-heading {
-    /* box model */
     border: none;
-    /* typography */
     text-decoration: underline;
   }
 
-  /* * --- CONTACT --- */
+  /* *  CONTACT  */
   #contact {
-    /* box model */
     padding: 3rem 2rem;
     padding-top: 5rem;
   }
+
   #contact h2 {
-    /* typography */
     font-size: 2rem;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
