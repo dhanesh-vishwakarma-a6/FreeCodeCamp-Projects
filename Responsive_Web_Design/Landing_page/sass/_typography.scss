@@ -1,0 +1,14 @@
+@mixin headings($size: 3rem, $start: 1, $end: 6) {
+  // check header count
+  @if $start < 1 or $end > 6 {
+    @error "heading count must be within h1 - h6";
+  }
+
+  // generate headers
+  @for $count from $start through $end {
+    h#{$count} {
+      font-size: $size;
+    }
+    $size: $size - 0.5rem; // decrement in the font-size
+  }
+}

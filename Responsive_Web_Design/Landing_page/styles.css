@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+/** GLOBAL STYLES*/
 *,
 html {
   margin: 0;
@@ -14,18 +15,20 @@ html {
   padding: 0;
 }
 
-body {
-  background-color: #ededed;
+li {
+  display: inline;
+  list-style: none;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  text-align: center;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-  margin-top: 1rem;
+a,
+a:active,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+a:-webkit-any-link {
+  cursor: pointer;
 }
 
 h1 {
@@ -40,17 +43,49 @@ h3 {
   font-size: 1.7rem;
 }
 
-li {
-  list-style: none;
-  display: inline;
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
+body {
+  background-color: #ededed;
+}
+
+/** GLOBAL CLASSES*/
+.flexBox, .container #pricing .product ul, .container #pricing .product, .container #pricing, .container #howItWorks, .container #features .feature .icon, .container #features .feature, .form-section #form, .form-section, #header #nav-bar ul, #header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.themeBtn, .container #pricing .product .btn, .form-section #form #submit {
+  color: white;
+  background-color: #c11f25;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  transition: all 300ms linear;
+  cursor: pointer;
+}
+
+.navlink-props, footer ul .nav-link, #header #nav-bar .nav-link {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 1rem;
 }
 
 #header {
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
   color: inherit;
   background-color: #ededed;
   width: 100vw;
@@ -65,22 +100,11 @@ li {
   width: 12rem;
   height: 4rem;
 }
-#header #nav-bar ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-#header #nav-bar .nav-link {
-  text-transform: capitalize;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 1rem;
-}
 #header #nav-bar .nav-link:visited,
 #header #nav-bar .nav-link:focus,
 #header #nav-bar .nav-link:active {
   color: inherit;
+  text-decoration: none;
 }
 
 .image-carousel {
@@ -94,15 +118,9 @@ li {
 }
 
 .form-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 .form-section #form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 .form-section #form #email {
@@ -112,18 +130,6 @@ li {
   margin-top: 1rem;
   border: none;
   border-radius: 0.25rem;
-}
-.form-section #form #submit {
-  color: white;
-  background-color: #c11f25;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  padding: 0.5rem 1rem;
-  margin: 1rem;
-  border: none;
-  border-radius: 0.25rem;
-  transition: all 300ms linear;
-  cursor: pointer;
 }
 .form-section #form #submit:hover {
   background-color: black;
@@ -136,20 +142,10 @@ li {
 .container #features {
   padding-top: 3.5rem;
 }
-.container #features .feature {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
 .container #features .feature .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  font-size: 4rem;
   width: 20vw;
   height: 8rem;
+  font-size: 4rem;
 }
 .container #features .feature .desc {
   width: 80vw;
@@ -158,25 +154,12 @@ li {
   text-align: left;
 }
 .container #howItWorks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-.container #pricing {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
 .container #pricing .product {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  width: 33.3333333333%;
+  width: 100%;
   margin: 0.5rem;
   border-radius: 0.25rem;
   border: 1px solid black;
@@ -190,9 +173,6 @@ li {
   padding: 1rem 0;
 }
 .container #pricing .product ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 .container #pricing .product ul li {
@@ -201,16 +181,7 @@ li {
   padding: 0.25rem;
 }
 .container #pricing .product .btn {
-  color: white;
-  background-color: #c11f25;
   font-size: 1rem;
-  text-transform: uppercase;
-  padding: 0.5rem 1rem;
-  margin: 1rem;
-  border: none;
-  border-radius: 0.25rem;
-  transition: all 300ms linear;
-  cursor: pointer;
 }
 .container #pricing .product .btn:hover {
   background-color: black;
@@ -225,17 +196,23 @@ footer {
 footer ul {
   padding: 0.5rem;
 }
-footer ul .nav-link {
-  text-transform: capitalize;
+footer ul .nav-link:visited,
+footer ul .nav-link:focus,
+footer ul .nav-link:active {
+  color: inherit;
   text-decoration: none;
-  font-weight: 500;
-  margin: 1rem;
 }
 footer .copyright {
   text-transform: capitalize;
 }
 
-@media (max-width: 540px) {
+@media only screen and (max-width: 540px) {
+  .FlexBox, .container #features .feature, #header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   h1 {
     font-size: 3rem;
     font-weight: 600;
@@ -258,18 +235,11 @@ footer .copyright {
     height: 7rem;
     padding: 0;
   }
-  #header .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
   #header #nav-bar {
     margin-top: 0.5rem;
   }
   #header #nav-bar .nav-link {
     margin: 1rem;
-    font-weight: 400;
   }
 
   .image-carousel {
@@ -288,9 +258,6 @@ footer .copyright {
     text-decoration: underline;
   }
   .container #features .feature {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
   }
   .container #features .feature .icon {
@@ -320,10 +287,6 @@ footer .copyright {
   }
   .container #pricing .product .btn {
     font-size: 1.2rem;
-    width: 90%;
-    /* spacing */
-    padding: 1rem;
-    margin: 1rem;
   }
 }
 

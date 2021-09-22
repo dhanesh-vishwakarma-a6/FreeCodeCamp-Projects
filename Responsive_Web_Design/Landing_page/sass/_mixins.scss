@@ -1,0 +1,55 @@
+// Visuals
+@mixin theme($col, $bg) {
+  color: $col;
+  background-color: $bg;
+}
+
+@mixin theme-btn($col, $bg, $font-size: 1.2rem) {
+  color: $col;
+  background-color: $bg;
+
+  font-size: $font-size;
+  text-transform: uppercase;
+
+  padding: 0.5rem 1rem;
+  margin: $space-3;
+  border: none;
+  border-radius: $radius-1;
+
+  transition: $transition;
+  cursor: pointer;
+}
+
+@mixin navlink-props {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+  margin: $space-3;
+}
+
+@mixin layred-shodow {
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
+
+// * MEDIA QUERIES
+@mixin breakpoint($point) {
+  @if $point == "large" {
+    @media only screen and (max-width: 1366px) {
+      @content;
+    }
+  } @else if $point == "desktop" {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $point == "tablet" {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  } @else if $point == "small" {
+    @media only screen and (max-width: 540px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+// flex box
+@mixin flex-box($main: center, $cross: center) {
+  display: flex;
+  justify-content: $main;
+  align-items: $cross;
+  @content;
+}
+
+// Box model
+@mixin layout($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin padding($values...) {
+  @each $var in $values {
+    padding: #{$var};
+  }
+}
+@mixin margin($values...) {
+  @each $var in $values {
+    margin: #{$var};
+  }
+}
